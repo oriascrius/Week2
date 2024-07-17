@@ -1,0 +1,304 @@
+@import "reset";
+// Bruno Ace SC 字體
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+
+// color
+$primary-color: #ffffff;
+$secondary-color: #000000;
+$secondary-about_text-color: #15161d;
+$green-color: #00ffa3;
+$header-font-color: #d1d1d1;
+$border-color: #e3e3e3;
+
+// font
+$font-family: "Bruno Ace SC", sans-serif;
+$line-height: 1.5;
+$fontsize-h1: 128px;
+$fontsize-h2: 64px;
+$fontsize-h3: 40px;
+$fontsize-fs-1: 32px;
+$fontsize-fs-2: 24px;
+$fontsize-fs-3: 20px;
+$fontsize-fs-4: 16px;
+
+// space
+$width-636: 636px;
+$width-526: 526px;
+$width-657: 657px;
+$me-24: 24px;
+$me-134: 134px;
+$mb-36: 36px;
+$mb-32: 36px;
+$mb-28: 28px;
+$mb-24: 24px;
+$mb-4: 4px;
+$pt-72: 72px;
+$py-40: 40px;
+$py-96: 96px;
+$py-127: 127px;
+$py-160: 160px;
+$py-206: 206px;
+
+// Base 全局應用的基本樣式和重置樣式
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // 測試格線用
+  // outline: solid 1px;
+}
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+}
+a {
+  text-decoration: none; /* 移除超鏈接的下劃線 */
+  display: inline-block; /* 將超鏈接顯示為行內塊級元素 */
+  color: inherit; /* 繼承父元素的文字顏色 */
+}
+img {
+  max-width: 100%; /* 圖片的最大寬度設置為其父元素寬度的 100% */
+  height: auto; /* 高度自動調整，保持圖片的寬高比 */
+  vertical-align: middle; /* 圖片在垂直方向上居中對齊 */
+}
+// Layout 設置頁面的主要佈局結構
+.header {
+  background-color: $secondary-color;
+  color: $header-font-color;
+}
+// Component 設置具體的(重複的像是 button) UI 組件
+.btn {
+  padding: 12px 24px;
+  border-radius: 32px;
+  // color: $secondary-color;
+}
+.btn-ligth {
+  background: $primary-color;
+  color: $secondary-color;
+}
+.btn-dark {
+  background: $secondary-color;
+  color: $primary-color;
+}
+
+// Page 特定頁面的樣式設置
+.nav {
+  justify-content: space-between;
+  padding: 40px 0;
+  li {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+.banner {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: $pt-72 0 0 0;
+  .banner-title {
+    // 行內變成區塊， text-align: right; 才能作用
+    display: block;
+    text-align: right;
+    color: $green-color;
+  }
+  // 左右各636 + 間隔24
+  .banner-left {
+    width: $width-636;
+    margin-right: $me-24;
+  }
+  .banner-right {
+    width: $width-636;
+  }
+  .banner-hover {
+    transition: transform 0.1s ease; /* 添加过渡效果 */
+    &:hover {
+      animation: bounce 0.8s ease; /* 悬停时应用弹跳动画 */
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0); /* 在关键帧定义时设置平移 */
+      }
+      40% {
+        transform: translateY(-15px); /* 在40%时向上移动15像素 */
+      }
+      60% {
+        transform: translateY(-7px); /* 在60%时向上移动7像素 */
+      }
+    }
+  }
+}
+.intro {
+  background-image: url("../imgs/background-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $primary-color;
+  padding: $py-160 0;
+  .intro-text {
+    font-size: $fontsize-fs-2;
+  }
+  .intro-left {
+    width: $width-526;
+    margin-right: $me-24;
+  }
+  .intro-right {
+    margin-right: $me-24;
+  }
+}
+.about {
+  color: $secondary-about_text-color;
+  font-size: $fontsize-fs-3;
+  .about-left {
+    width: $width-636;
+    flex-wrap: wrap;
+    margin-right: $me-134;
+    padding: $py-206 0;
+    // 四宮格佔左邊一半並每個 li 只佔一半
+    li {
+      // 作法一
+      // width: 48%;
+      // 每個 li 間隔 24px，等於兩個元素各分一半 12px
+      width: calc(50% - 12px);
+      border: 1px solid $border-color;
+      box-shadow: 4px 4px 4px 0px #00000014;
+      p:first-of-type {
+        margin-bottom: $mb-4;
+      }
+      h3 {
+        margin-bottom: $mb-4;
+      }
+      p:nth-of-type(2) {
+        font-size: $fontsize-fs-4;
+      }
+      padding: 16px 0 16px 16px;
+    }
+  }
+  .about-right {
+    width: $width-526;
+    padding: $py-160 0;
+  }
+}
+.contect {
+  color: $primary-color;
+  background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
+  padding: $py-96 0;
+  .contect-link {
+    // 選中後發光
+    :hover {
+      transition: 1s;
+      box-shadow: 0px 0px 16px 3px rgba(144, 148, 255, 0.9);
+    }
+    img {
+      border-radius: 40px;
+    }
+  }
+  .contect-left {
+    width: $width-657;
+    padding: $py-127 0;
+  }
+  .contect-right {
+    width: $width-526;
+    margin-left: auto;
+    padding: $py-96 0;
+  }
+}
+.projects {
+  padding: 0 0 $py-160 0;
+  .projects-title {
+    width: 746px;
+    margin-left: auto;
+    padding: $py-160 0 16px 0;
+  }
+  .projects-hover {
+    transition: transform 0.1s ease; /* 添加过渡效果 */
+    &:hover {
+      animation: bounce 0.8s ease; /* 悬停时应用弹跳动画 */
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0); /* 在关键帧定义时设置平移 */
+      }
+      40% {
+        transform: translateY(-15px); /* 在40%时向上移动15像素 */
+      }
+      60% {
+        transform: translateY(-7px); /* 在60%时向上移动7像素 */
+      }
+    }
+  }
+}
+.footer {
+  background-color: $secondary-color;
+  padding: $py-40 0;
+  text-align: center;
+  color: $primary-color;
+}
+
+// Utils 常用的實用工具類樣式
+.container {
+  // 根據設計稿，左右留白，中間內容選中可看出左右寬各636，中間再加上24的間隔，所以共是1296px
+  max-width: 1296px;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-start {
+  align-items: start;
+}
+.align-items-center {
+  align-items: center;
+}
+.h1 {
+  font-size: $fontsize-h1;
+}
+.h2 {
+  font-size: $fontsize-h2;
+}
+.fs-2 {
+  font-size: $fontsize-fs-2;
+}
+.fs-3 {
+  font-size: $fontsize-fs-3;
+}
+.fs-4 {
+  font-size: $fontsize-fs-4;
+}
+.mb-36 {
+  margin-bottom: $mb-36;
+}
+.mb-32 {
+  margin-bottom: $mb-32;
+}
+.mb-28 {
+  margin-bottom: $mb-28;
+}
+.mb-24 {
+  margin-bottom: $mb-24;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-24 {
+  gap: 24px;
+}

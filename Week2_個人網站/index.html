@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>個人網站</title>
+  <link rel="stylesheet" href="css/all.css" />
+</head>
+
+<body>
+  <!-- **************************wrap最後確定要不要+************************** -->
+  <div class="wrap">
+    <!-- header -->
+    <header class="header">
+      <nav>
+        <!-- header 需要維持滿版，所以 container 放在內容裡，才不會背景被限縮在 container  -->
+        <ul class="d-flex nav container">
+          <li><a href="#"></a>WILLIAM LEE</li>
+          <li><a href="#"></a>BASED IN TAIWAN</li>
+          <li><a href="#"></a>CURRENTLY FRONT END ENGINEER AT HEXSCHOOL</li>
+          <li><a href="#"></a>CONTACT ME</li>
+        </ul>
+      </nav>
+      <!-- banner -->
+      <!-- 內容在中間，所以加上 container 限縮在中間 -->
+      <div class="banner">
+        <div class="container d-flex align-items-center">
+          <!-- banner 左 -->
+          <img class="banner-left" src="imgs/banner.png" alt="個人照片" />
+          <!-- banner 右 -->
+          <div class="banner-right">
+            <h1 class="h2">Hi <br>
+              I’m a front-end developer
+              <span class="banner-title h1">William</span>
+            </h1>
+            <div class="banner-hover d-flex justify-content-end">
+              <a href="#" class="btn btn-ligth">contact me <img src="imgs/arrow_outward_dark.png" alt="黑色小箭頭"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Introduction -->
+      <section class="intro">
+        <!-- 左 -->
+        <div class="container d-flex">
+          <div class="intro-left">
+            <h2 class="h2 mb-36">Introduction</h2>
+            <p class="mb-32 intro-text">
+              Hi, I'm William Lee, a Front-End Developer with a passion for
+              building beautiful and responsive websites that provide an optimal
+              user experience.
+            </p>
+            <img src="imgs/introduction_01-sm.png" alt="introduction小菱形">
+            <img src="imgs/introduction_01-sm.png" alt="introduction小菱形">
+            <img src="imgs/introduction_01-sm.png" alt="introduction小菱形">
+          </div>
+          <!-- 右 -->
+          <ul class="d-flex">
+            <li><img class="intro-right" src="imgs/introduction_01.png" alt="introduction大菱形" /></li>
+            <li><img class="intro-right" src="imgs/introduction_02.png" alt="introduction相機" /></li>
+            <li><img src="imgs/introduction_03.png" alt="introduction人像" /></li>
+          </ul>
+        </div>
+      </section>
+      <!-- About Me -->
+      <section class="about">
+        <!-- about 左 -->
+        <div class="container d-flex align-items-center">
+          <ol class="about-left d-flex gap-24">
+            <li>
+              <p>01</p>
+              <h3>Attention to Detail</h3>
+              <p>class>Meticulous code analysis and optimization.</p>
+            </li>
+            <li>
+              <p>02</p>
+              <h3>Adaptability</h3>
+              <p>Swift learning of new technologies.</p>
+            </li>
+            <li>
+              <p>03</p>
+              <h3>Problem Solver</h3>
+              <p>Identifying and resolving issues.</p>
+            </li>
+            <li>
+              <p>04</p>
+              <h3>Team Player</h3>
+              <p>Collaborates and shares ideas.</p>
+            </li>
+          </ol>
+          <!-- about 右 -->
+          <div class="about-right">
+            <h2 class="h2 mb-36">About Me</h2>
+            <p class="fs-2">With over 5 years of experience, I'm proficient in HTML, CSS, JavaScript, jQuery, and React.
+              I have a
+              strong
+              understanding of user experience design and accessibility. I'm always learning new technologies and
+              techniques
+              to stay up-to-date in the field.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Contect -->
+      <section class="contect">
+        <div class="container d-flex">
+          <div class="contect-left d-flex align-items-center gap-16">
+            <h2 class="h2">CONTACT ME</h2>
+            <img src="imgs/arrow_right.png" alt="大箭頭">
+          </div>
+          <ul class="contect-right d-flex gap-20">
+            <li><a href="#" class="contect-link"><img src="imgs/discord.png" alt="discord"></a></li>
+            <li><a href="#" class="contect-link"><img src="imgs/instagram.png" alt="instagram"></a></li>
+            <li><a href="#" class="contect-link"><img src="imgs/message.png" alt="message"></a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- Projects -->
+      <section class="projects">
+        <div class="container">
+          <h2 class="h2 projects-title">My Projects</h2>
+          <div class="d-flex gap-24">
+            <!-- 左 -->
+            <img src="imgs/project_01.png" alt="筆電">
+            <!-- 右 -->
+            <div class="">
+              <!-- 上 -->
+              <div class="d-flex projects-top gap-24 mb-28">
+                <img src="imgs/project_02.png" alt="程式碼">
+                <div class="d-flex flex-column justify-content-between align-items-start">
+                  <p>I've worked on a variety of websites, including e-commerce sites, blogs, and landing pages. I take
+                    pride in creating clean, efficient, and user-friendly code.</p>
+                  <a href="#" class="btn btn-dark projects-hover">SEE MORE <img src="imgs/arrow_outward_light.png" alt="白色小箭頭"></a>
+                </div>
+              </div>
+              <!-- 下 -->
+              <div class="d-flex gap-24">
+                <img src="imgs/project_03.png" alt="手機">
+                <img src="imgs/project_04.png" alt="桌搭">
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>all rights reserved @hexschool2023</p>
+    </footer>
+  </div>
+</body>
+
+</html>
