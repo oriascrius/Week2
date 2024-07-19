@@ -1,0 +1,76 @@
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.h1 {
+  font-size: 128px;
+}
+
+.h2 {
+  font-size: 64px;
+}
+
+.fs-2 {
+  font-size: 24px;
+}
+
+.fs-3 {
+  font-size: 20px;
+}
+
+.fs-4 {
+  font-size: 16px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+
+.mb-32 {
+  margin-bottom: 36px;
+}
+
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-24 {
+  gap: 24px;
+}/*# sourceMappingURL=utilities.css.map */
